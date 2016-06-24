@@ -8,15 +8,17 @@ const event = {
       this.bus = new Vue()
     }
 
-    return this.bus
+    return this
   },
 
   emit(name, ...args) {
-    this.bus.$emit(name, args)
+    this.bus.$emit(name, ...args)
+    return this
   },
 
   on(name, func) {
     this.bus.$on(name, func)
+    return this
   }
 }
 

@@ -57,7 +57,7 @@ export default {
   created() {
     // Listen to the 'tag-selected' event to trigger the filtering process.
     event.on('tag-selected', tag => {
-      this.q = tag[0]
+      this.q = tag
 
       // Set the focus into the search field. Some little UX doesn't kill.
       this.$nextTick(() => {
